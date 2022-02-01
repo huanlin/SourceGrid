@@ -16,6 +16,7 @@
     <RepositoryUrl>https://github.com/huanlin/SourceGrid</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>grid</PackageTags>
+    <PackageProjectUrl>https://github.com/huanlin/SourceGrid</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
