@@ -134,7 +134,8 @@ namespace SourceGrid.Cells.Editors
 					throw new SourceGridException("There is already a Cell in edit state");
 
                 //sandhra.prakash@siemens.com: moved from constructor to here to improve performance
-                mControl = CreateControl();
+		if (mControl == null)
+                	mControl = CreateControl();
 
                 if (Control == null)
                     throw new SourceGridException("control cannot be null");
