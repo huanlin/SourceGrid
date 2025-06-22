@@ -1,4 +1,4 @@
-[![Build and Release](https://github.com/huanlin/SourceGrid/actions/workflows/build-and-release.yml/badge.svg)](https://github.com/huanlin/SourceGrid/actions/workflows/build-and-release.yml)
+[![Build and Release](https://github.com/huanlin/SourceGrid/actions/workflows/build-release.yml/badge.svg)](https://github.com/huanlin/SourceGrid/actions/workflows/build-and-release.yml)
 [![NuGet](https://img.shields.io/nuget/v/SourceGrid-huanlin.svg)](https://www.nuget.org/packages/SourceGrid-huanlin/) 
 
 ## SourceGrid
