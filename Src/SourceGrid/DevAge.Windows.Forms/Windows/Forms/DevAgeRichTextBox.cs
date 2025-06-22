@@ -404,6 +404,7 @@ namespace DevAge.Windows.Forms
         /// Underline styles can be set to any value of the
         /// <see cref="UnderlineStyle"/> enumeration.
         /// </remarks>
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public UnderlineStyle SelectionUnderlineStyle
         {
             get
@@ -452,6 +453,7 @@ namespace DevAge.Windows.Forms
         /// Underline colors can be set to any value of the
         /// <see cref="UnderlineColor"/> enumeration.
         /// </remarks>
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public UnderlineColor SelectionUnderlineColor
         {
             get
@@ -495,6 +497,7 @@ namespace DevAge.Windows.Forms
         /// <summary>
         /// Set the effect of the selected text
         /// </summary>
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public EffectType SelectionEffect
         {
             set

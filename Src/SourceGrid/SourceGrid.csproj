@@ -1,37 +1,37 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>disable</Nullable>
-    <UseWindowsForms>true</UseWindowsForms>
-    <SignAssembly>False</SignAssembly>
-    <AssemblyOriginatorKeyFile>SourceGrid.snk</AssemblyOriginatorKeyFile>
-    <Authors>Davide Icardi, Darius Damalakas</Authors>
-    <Copyright>Copyright (c) 2005 - 2012 Davide Icardi, Darius Damalakas</Copyright>
-    <BaseOutputPath>..\..\Out\SourceGrid</BaseOutputPath>
-    <PackageId>$(AssemblyName)-huanlin</PackageId>
-    <Description>A grid control for .NET Windows Forms application.</Description>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/huanlin/SourceGrid</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>grid</PackageTags>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFrameworks>net8.0-windows;net9.0-windows</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<UseWindowsForms>true</UseWindowsForms>
+		<SignAssembly>False</SignAssembly>
+		<AssemblyOriginatorKeyFile>SourceGrid.snk</AssemblyOriginatorKeyFile>
+		<Authors>Davide Icardi, Darius Damalakas</Authors>
+		<Copyright>Copyright (c) 2005 - 2012 Davide Icardi, Darius Damalakas</Copyright>
+		<BaseOutputPath>..\..\Out\SourceGrid</BaseOutputPath>
+		<PackageId>$(AssemblyName)-huanlin</PackageId>
+		<Description>A grid control for .NET Windows Forms application.</Description>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/huanlin/SourceGrid</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>grid</PackageTags>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Include="..\..\README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="6.0.0" />
-    <PackageReference Include="MinVer" Version="2.5.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="System.Resources.Extensions" Version="6.0.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Windows.Compatibility" Version="9.0.6" />
+		<PackageReference Include="MinVer" Version="6.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="System.Resources.Extensions" Version="9.0.6" />
+	</ItemGroup>
 
 </Project>

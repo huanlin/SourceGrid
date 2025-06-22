@@ -152,6 +152,7 @@ namespace SourceGrid
         /// <summary>
         /// Gets or sets the optimize mode. Default is ForRows
         /// </summary>
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public CellOptimizeMode OptimizeMode
         {
             get { return mOptimizeMode; }
@@ -285,6 +286,7 @@ namespace SourceGrid
                 throw new SourceGridException("Invalid OptimizeMode");
         }
 
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Cells.ICell this[Position position]
         {
             get
@@ -305,6 +307,7 @@ namespace SourceGrid
         /// If you get a ICell position occupied by a row/col span cell,
         /// and EnableRowColSpan is true, this method returns the cell with Row/Col span.
         /// </summary>
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Cells.ICell this[int row, int col]
         {
             get

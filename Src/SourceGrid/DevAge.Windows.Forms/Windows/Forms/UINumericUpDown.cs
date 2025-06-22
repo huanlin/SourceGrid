@@ -10,10 +10,13 @@
 
 #endregion Copyright
 
+using System.ComponentModel;
+
 namespace DevAge.Windows.Forms
 {
     public class UINumericUpDown : System.Windows.Forms.NumericUpDown
     {
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public new bool ReadOnly
         {
             get { return base.ReadOnly; }

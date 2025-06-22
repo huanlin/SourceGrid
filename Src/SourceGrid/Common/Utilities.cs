@@ -85,29 +85,20 @@ namespace SourceGrid
 	[Serializable]
 	public class SourceGridException : ApplicationException
 	{
-		public SourceGridException(string p_strErrDescription):
-			base(p_strErrDescription)
+		public SourceGridException(string message): base(message)
 		{
 		}
-		public SourceGridException(string p_strErrDescription, Exception p_InnerException):
-			base(p_strErrDescription, p_InnerException)
-		{
-		}
-		protected SourceGridException(SerializationInfo p_Info, StreamingContext p_StreamingContext):
-			base(p_Info, p_StreamingContext)
-		{
-		}
-	}
 
-	[Serializable]
+        public SourceGridException(string message, Exception innerException)
+			: base(message, innerException)
+        {
+        }
+    }
+
+    [Serializable]
 	public class EditingCellException : SourceGridException
 	{
-		public EditingCellException(Exception innerException):
-			base(innerException.Message, innerException)
-		{
-		}
-		protected EditingCellException(SerializationInfo p_Info, StreamingContext p_StreamingContext):
-			base(p_Info, p_StreamingContext)
+		public EditingCellException(Exception innerException): base(innerException.Message)
 		{
 		}
 	}

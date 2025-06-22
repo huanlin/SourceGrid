@@ -43,7 +43,8 @@ namespace DevAge.Windows.Forms
 			base.Dispose( disposing );
 		}
 
-		public virtual Color SelectedColor
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public virtual Color SelectedColor
 		{
 			get{return panelColor.BackColor;}
 			set{panelColor.BackColor = value;}
@@ -138,7 +139,8 @@ namespace DevAge.Windows.Forms
 			}
 		}
 
-		public new Color ForeColor
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public new Color ForeColor
 		{
 			get{return labelColor.ForeColor;}
 			set{labelColor.ForeColor = value;}

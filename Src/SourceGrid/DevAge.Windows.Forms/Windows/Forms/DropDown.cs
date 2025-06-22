@@ -140,13 +140,15 @@ namespace DevAge.Windows.Forms
 		private Control m_ParentControl = null;
 		private Control m_InnerControl = null;
 
-		public Control ParentControl
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public Control ParentControl
 		{
 			get{return m_ParentControl;}
 			set{m_ParentControl = value;}
 		}
 
-		public Control InnerControl
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public Control InnerControl
 		{
 			get{return m_InnerControl;}
 			set{m_InnerControl = value;}
@@ -245,7 +247,9 @@ namespace DevAge.Windows.Forms
 		}
 
 		private DropDownFlags m_Flags = DropDownFlags.CloseOnEnter | DropDownFlags.CloseOnEscape;
-		public DropDownFlags DropDownFlags
+        
+		[Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public DropDownFlags DropDownFlags
 		{
 			get{return m_Flags;}
 			set{m_Flags = value;}

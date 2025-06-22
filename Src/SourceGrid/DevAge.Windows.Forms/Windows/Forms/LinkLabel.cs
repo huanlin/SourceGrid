@@ -107,7 +107,9 @@ namespace DevAge.Windows.Forms
 			get{return mImageAlignment;}
 			set{mImageAlignment = value;Invalidate(true);}
 		}
-		public DevAge.Drawing.ContentAlignment TextAlignment
+        
+		[Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public DevAge.Drawing.ContentAlignment TextAlignment
 		{
 			get{return Drawing.Utilities.StringFormatToContentAlignment(mStringFormat);}
 			set{Drawing.Utilities.ApplyContentAlignmentToStringFormat(value, mStringFormat);Invalidate(true);}
@@ -172,10 +174,12 @@ namespace DevAge.Windows.Forms
 			set{mBorderRound = value;Invalidate(true);}
 		}
 		private Color mBorderColor = Color.Black;
-		/// <summary>
-		/// Border color.
-		/// </summary>
-		public Color BorderColor
+
+        /// <summary>
+        /// Border color.
+        /// </summary>
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public Color BorderColor
 		{
 			get{return mBorderColor;}
 			set{mBorderColor = value;Invalidate(true);}
@@ -183,7 +187,9 @@ namespace DevAge.Windows.Forms
 		#endregion
 
 		private Color mBackColor = Color.FromKnownColor(KnownColor.Control);
-		public new Color BackColor
+
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public new Color BackColor
 		{
 			get{return mBackColor;}
 			set{mBackColor = value;Invalidate();}

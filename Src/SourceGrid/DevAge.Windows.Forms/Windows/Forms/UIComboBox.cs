@@ -11,6 +11,7 @@
 #endregion Copyright
 
 using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -112,8 +113,10 @@ namespace DevAge.Windows.Forms
         }
 
 
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public HorizontalAlignment TextAlignment { get; set; }
 
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool ReadOnly
         {
             get { return m_ReadOnly; }
@@ -139,6 +142,7 @@ namespace DevAge.Windows.Forms
             }
         }
 
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool IsButtonVisibleOnReadOnly { get; set; }
 
         #endregion Properties

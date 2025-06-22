@@ -89,6 +89,7 @@ namespace DevAge.Windows.Forms
         /// sandhra.prakash@siemens.com : This Property was introduced so that user will
         /// have the option to decide on which action the dropdown should close.
         /// </summary>
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public DropDownFlags DropDownFlags 
         {
             get { return m_DropDownFlags; }
