@@ -1,5 +1,10 @@
 # SourceGrid
 
+## v6.1.0 (June 2025 by Michael Tsai)
+
+- Upgrade target framework to .NET 8 and .NET 9.
+- Modify custom exception classes to derive from `System.Exception` (instead of ApplicationException, which is not a good idea). See #3.
+
 ## v6.0.0 (January 2022 by Michael Tsai)
 
 - Upgraded project file format to SDK-style using [.NET Upgrade Assistant](https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview).
