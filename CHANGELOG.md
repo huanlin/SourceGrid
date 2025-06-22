@@ -4,6 +4,7 @@
 
 - Upgrade target framework to .NET 8 and .NET 9.
 - Modify custom exception classes to derive from `System.Exception` (instead of ApplicationException, which is not a good idea). See #3.
+- Use GitHub Actions for CI/CD. AppVeyor is no longer used.
 
 ## v6.0.0 (January 2022 by Michael Tsai)
 

@@ -1,4 +1,6 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/19e7evu87w8uhr74?svg=true)](https://ci.appveyor.com/project/huanlin/SourceGrid)
+[![Build and Release](https://github.com/huanlin/SourceGrid/actions/workflows/build-and-release.yml/badge.svg)](https://github.com/huanlin/SourceGrid/actions/workflows/build-and-release.yml)
+[![NuGet](https://img.shields.io/nuget/v/SourceGrid-huanlin.svg)](https://www.nuget.org/packages/SourceGrid-huanlin/) 
+
 ## SourceGrid
 
 SourceGrid is a free open source grid control. Supports virtual grid, custom cells and editors, advanced formatting options and many others features
@@ -8,21 +10,23 @@ SourceGrid is a Windows Forms control written entirely in C#, goal is to create 
 
 For more detailed information, Refer article at [CodeProject](https://www.codeproject.com/Articles/3531/SourceGrid-Open-Source-C-Grid-Control)
 
-Note: this fork is created by Michael Tsai to support .NET 6.
+Note: this fork is created by Michael Tsai to support .NET 8 and .NET 9.
 
 # Preconditions
 
 - Visual Studio 2022
-- .NET 6
+- .NET 8/9
+
+# CI/CD
+
+- Use [MinVer](https://github.com/adamralph/minver) for versioning with tag name. The tag name should be in the format `X.Y.Z` (e.g., `6.1.0`). Note: Do not use `v` prefix.
+- Automatically deploy the package to NuGet.org. See .github/workflows/build-and-deploy.yml for details.
 
 # Recent Changes
 
-- Upgraded project file format to SDK-style using [.NET Upgrade Assistant](https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview).
-- Changed target framework from .NET 3.5 to .NET 6.
-- Fixed obsolete code. For example: ContextMenu is replaced by ContextMenuStrip.
-- Removed unused code files.
-- Use [MinVer](https://github.com/adamralph/minver) for easy versioning with tag name.
-- Automatically deploy the package to NuGet.org.
+- Upgrade target framework to .NET 8 and .NET 9.
+- Modify custom exception classes to derive from `System.Exception` (instead of ApplicationException, which is not a good idea). See #3.
+- Use GitHub Actions for CI/CD. AppVeyor is no longer used. 
 
 See [CHANGELOG.md](CHANGELOG.md) for more information.
 
