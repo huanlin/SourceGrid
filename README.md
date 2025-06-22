@@ -1,4 +1,4 @@
-[![Build and Release](https://github.com/huanlin/SourceGrid/actions/workflows/build-release.yml/badge.svg)](https://github.com/huanlin/SourceGrid/actions/workflows/build-release.yml)
+﻿[![Build and Release](https://github.com/huanlin/SourceGrid/actions/workflows/build-release.yml/badge.svg)](https://github.com/huanlin/SourceGrid/actions/workflows/build-release.yml)
 [![NuGet](https://img.shields.io/nuget/v/SourceGrid-huanlin.svg)](https://www.nuget.org/packages/SourceGrid-huanlin/) 
 
 ## SourceGrid
@@ -16,7 +16,7 @@ For more detailed information, Refer article at [CodeProject](https://www.codepr
 
 This fork is created by Michael Tsai to support the recent .NET versions.
 
-> �� fork �O�� Michael Tsai �ЫءA�ت��O�����i�䴩���e�D�y������ .NET�C
+> 此 fork 是由 Michael Tsai 創建，目的是持續跟進支援當前主流版本的 .NET。
 
 ### Preconditions
 
