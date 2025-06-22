@@ -132,7 +132,9 @@ namespace DevAge.Windows.Forms
 
 
 		private Exception m_Exception;
-		public Exception Exception
+
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public Exception Exception
 		{
 			get{return m_Exception;}
 			set{m_Exception = value;}

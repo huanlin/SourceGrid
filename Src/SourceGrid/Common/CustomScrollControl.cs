@@ -276,7 +276,7 @@ namespace SourceGrid
         //    else
         //        mHScrollBar.Height = 0;
         //}
-        [Browsable(false)]
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool HScrollBarVisible
         {
             get { return panelDockBottom.Visible; }
@@ -290,7 +290,7 @@ namespace SourceGrid
         //    else
         //        mVScrollBar.Width = 0;
         //}
-        [Browsable(false)]
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool VScrollBarVisible
         {
             get { return mVScrollBar.Visible; }

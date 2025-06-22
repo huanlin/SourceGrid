@@ -80,7 +80,9 @@ namespace DevAge.Windows.Forms
 		}
 
 		private Image m_Image = null;
-		public Image Image
+
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public Image Image
 		{
 			get{return m_Image;}
 			set{m_Image = value;}

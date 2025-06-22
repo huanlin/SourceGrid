@@ -102,8 +102,8 @@ namespace DevAge.Windows.Forms
 			}
 		}
 
-		[Browsable(false)]
-		public new Color BackColor
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public new Color BackColor
 		{
 			get{return base.BackColor;}
 			set{base.BackColor = value;}

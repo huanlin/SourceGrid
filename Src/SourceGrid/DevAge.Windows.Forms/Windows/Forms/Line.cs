@@ -101,28 +101,36 @@ namespace DevAge.Windows.Forms
 		}
 
 		private System.Drawing.Drawing2D.DashStyle mDashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-		public System.Drawing.Drawing2D.DashStyle DashStyle
+
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public System.Drawing.Drawing2D.DashStyle DashStyle
 		{
 			get{return mDashStyle;}
 			set{mDashStyle = value;Invalidate();}
 		}
 
 		private Color m_FirstColor = Color.FromKnownColor(KnownColor.ControlDark);
-		public Color FirstColor
+
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public Color FirstColor
 		{
 			get{return m_FirstColor;}
 			set{m_FirstColor = value;Invalidate();}
 		}
 
 		private Color m_SecondColor = Color.FromKnownColor(KnownColor.ControlLightLight);
-		public Color SecondColor
+
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public Color SecondColor
 		{
 			get{return m_SecondColor;}
 			set{m_SecondColor = value;Invalidate();}
 		}
 	
 		private LineStyle m_LineStyle = LineStyle.Horizontal;
-		public LineStyle LineStyle
+
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public LineStyle LineStyle
 		{
 			get{return m_LineStyle;}
 			set

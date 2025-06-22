@@ -61,20 +61,26 @@ namespace DevAge.Windows.Forms
 		#endregion
 
 		private PositionRecorderIsolatedStorage m_Setting = new PositionRecorderIsolatedStorage();
+
 		[Description("Isolated Storage FileName where the form save the position information")]
-		public virtual string StorageFileName
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public virtual string StorageFileName
 		{
 			get{return m_Setting.StorageFileName;}
 			set{m_Setting.StorageFileName = value;}
 		}
+		
 		[Description("Restore flags")]
-		public virtual RestoreFlags RestoreFlags
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public virtual RestoreFlags RestoreFlags
 		{
 			get{return m_Setting.RestoreFlags;}
 			set{m_Setting.RestoreFlags = value;}
 		}
+
 		[Description("Save flags")]
-		public virtual SaveFlags SaveFlags
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public virtual SaveFlags SaveFlags
 		{
 			get{return m_Setting.SaveFlags;}
 			set{m_Setting.SaveFlags = value;}

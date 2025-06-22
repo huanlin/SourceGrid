@@ -1,9 +1,10 @@
+using DevAge.Drawing;
 using SourceGrid.Cells;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Printing;
-using DevAge.Drawing;
 
 namespace SourceGrid.Exporter
 {
@@ -46,7 +47,8 @@ namespace SourceGrid.Exporter
 
 		private Range m_RangeToPrint = Range.Empty;
 
-		public Range RangeToPrint {
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public Range RangeToPrint {
 			get { return m_RangeToPrint; }
 			set
 			{
@@ -63,12 +65,14 @@ namespace SourceGrid.Exporter
 		private Font m_PageHeaderFont = null;
 		private string m_PageHeaderText = string.Empty;
 
-		public Font PageHeaderFont {
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public Font PageHeaderFont {
 			get { return m_PageHeaderFont; }
 			set { m_PageHeaderFont = value; }
 		}
 
-		public string PageHeaderText {
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public string PageHeaderText {
 			get { return m_PageHeaderText; }
 			set { m_PageHeaderText = value; }
 		}
@@ -76,12 +80,14 @@ namespace SourceGrid.Exporter
 		private Font m_PageFooterFont = null;
 		private string m_PageFooterText = string.Empty;
 
-		public Font PageFooterFont {
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public Font PageFooterFont {
 			get { return m_PageFooterFont; }
 			set { m_PageFooterFont = value; }
 		}
 
-		public string PageFooterText {
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public string PageFooterText {
 			get { return m_PageFooterText; }
 			set { m_PageFooterText = value; }
 		}
@@ -89,12 +95,14 @@ namespace SourceGrid.Exporter
 		private Font m_PageTitleFont = null;
 		private string m_PageTitleText = string.Empty;
 
-		public Font PageTitleFont {
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public Font PageTitleFont {
 			get { return m_PageTitleFont; }
 			set { m_PageTitleFont = value; }
 		}
 
-		public string PageTitleText {
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public string PageTitleText {
 			get { return m_PageTitleText; }
 			set { m_PageTitleText = value; }
 		}
@@ -172,10 +180,11 @@ namespace SourceGrid.Exporter
 
 		private bool m_RepeatFixedRows = false;
 
-		/// <summary>
-		/// Property if fixed rows should be repeated on each page.
-		/// </summary>
-		public bool RepeatFixedRows
+        /// <summary>
+        /// Property if fixed rows should be repeated on each page.
+        /// </summary>
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public bool RepeatFixedRows
 		{
 			get { return m_RepeatFixedRows; }
 			set { m_RepeatFixedRows = value; }

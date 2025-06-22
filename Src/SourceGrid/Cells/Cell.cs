@@ -254,7 +254,7 @@ namespace SourceGrid.Cells
 			{
 				mColumnSpan = oldColSpan;
 				mRowSpan = oldRowSpan;
-				throw new OverlappingCellException("Can not change span", e);
+				throw new OverlappingCellException("Can not change span! Inner exception: " + e.Message);
 			}
 		}
 		

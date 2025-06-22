@@ -1162,9 +1162,11 @@ namespace SourceGrid
         }
 
         private GridSelectionMode mSelectionMode;
+
         /// <summary>
         /// Gets or sets the selection mode. Changing this property cause the Selection object to be recreated, for this reason remember to set this property at the beginning of your code.
         /// </summary>
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public GridSelectionMode SelectionMode
         {
             get { return mSelectionMode; }
@@ -1211,7 +1213,7 @@ namespace SourceGrid
         {
             if (m_MouseCellPosition != p_Cell)
             {
-                //se la cella che sta perdento il mouse è anche quella che ha ricevuto un eventuale evento di MouseDown non scateno il MouseLeave (che invece verrà scatenato dopo il MouseUp)
+                //se la cella che sta perdento il mouse ?anche quella che ha ricevuto un eventuale evento di MouseDown non scateno il MouseLeave (che invece verr?scatenato dopo il MouseUp)
                 if (m_MouseCellPosition.IsEmpty() == false &&
                     m_MouseCellPosition != m_MouseDownPosition)
                 {
@@ -1795,6 +1797,7 @@ namespace SourceGrid
         #region Paint
 
         //sandhra.prakash@siemens.com: Blocking the painting when a row is deleted to avoid the count missmatch issue during painting
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         internal bool BlockPainting { get; set; }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -1963,7 +1966,7 @@ namespace SourceGrid
             }
             else //se non ho nessuna cella attualmente che ha ricevuto un mousedown, l'evento di MouseMove viene segnalato sulla cella correntemente sotto il Mouse
             {
-                // se non c'è nessuna cella MouseDown cambio la cella corrente sotto il Mouse
+                // se non c'?nessuna cella MouseDown cambio la cella corrente sotto il Mouse
                 ChangeMouseCell(mousePosition);//in ogni caso cambio la cella corrente
 
                 //sandhra.prakash@siemens.com: This line was commented out to fix the issue with
@@ -2059,7 +2062,7 @@ namespace SourceGrid
             Position clickPosition = PositionAtPoint(PointToClient(Control.MousePosition));
 
             //Se ho precedentemente scatenato un MouseDown su una cella
-            // e se questa corrisponde alla cella sotto il puntatore del mouse (non posso usare MouseCellPosition perchè questa viene aggiornata solo quando non si ha una cella come MouseDownPosition
+            // e se questa corrisponde alla cella sotto il puntatore del mouse (non posso usare MouseCellPosition perch?questa viene aggiornata solo quando non si ha una cella come MouseDownPosition
             if (MouseDownPosition.IsEmpty() == false &&
                 MouseDownPosition == clickPosition)
             {
@@ -2389,6 +2392,7 @@ namespace SourceGrid
         /// such as SortRangeRows, or even sort the data
         /// in your own data source. This property is for UI only
         /// </summary>
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public abstract bool EnableSort { get; set; }
 
         /// <summary>
@@ -2855,6 +2859,7 @@ namespace SourceGrid
         /// <summary>
         /// ToolTip text
         /// </summary>
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string ToolTipText
         {
             get { return toolTip.GetToolTip(this); }
@@ -3305,12 +3310,14 @@ namespace SourceGrid
         /// cursor is moved out of the bounds of the grid (Here we give an offset so that
         /// autoscroll can be done in all directions).
         /// </summary>
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int DragOffset { get; set; }
 
         /// <summary>
         /// Gets or sets the value indicating whether to pause autoscrolling when mouse
         /// moves out of the bounds of the grid (Grid.Rectangle + DragOffset)
         /// </summary>
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool IsCustomAreaAutoScrollEnabled { get; set; }
 
         private IScrollingStyle m_ScrollingStyle;
@@ -3323,6 +3330,7 @@ namespace SourceGrid
         /// <summary>
         /// Gets or sets the value indicating whether to enable smooth scrolling in grid
         /// </summary>
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool EnableSmoothScrolling
         {
             get { return m_EnableSmoothScrolling; }

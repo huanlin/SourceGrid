@@ -137,7 +137,9 @@ namespace DevAge.Windows.Forms
 		}
 
 		private string m_StatusFormat = "{0} of {1}";
-		public string StatusFormat
+
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public string StatusFormat
 		{
 			get{return m_StatusFormat;}
 			set{m_StatusFormat = value;}
@@ -188,8 +190,9 @@ namespace DevAge.Windows.Forms
 		}
 
 		private int m_CurrentImageIndex = -1;
-	
-		public int CurrentImageIndex
+
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public int CurrentImageIndex
 		{
 			get{return m_CurrentImageIndex;}
 			set
@@ -199,7 +202,8 @@ namespace DevAge.Windows.Forms
 			}
 		}
 
-		public Size ImageAreaSize
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public Size ImageAreaSize
 		{
 			get{return pictureBox.Size;}
 			set
@@ -209,13 +213,15 @@ namespace DevAge.Windows.Forms
 			}
 		}
 
-		public System.Windows.Forms.BorderStyle ImageAreaBorderStyle
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public System.Windows.Forms.BorderStyle ImageAreaBorderStyle
 		{
 			get{return pictureBox.BorderStyle;}
 			set{pictureBox.BorderStyle = value;}
 		}
 
-		public PictureBoxSizeMode ImageAreaSizeMode
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public PictureBoxSizeMode ImageAreaSizeMode
 		{
 			get{return pictureBox.SizeMode;}
 			set{pictureBox.SizeMode = value;}

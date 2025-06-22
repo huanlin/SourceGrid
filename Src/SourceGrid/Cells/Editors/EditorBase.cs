@@ -39,6 +39,7 @@ DEALINGS IN THE SOFTWARE. */
 #endregion Copyright
 
 using System;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace SourceGrid.Cells.Editors
@@ -114,10 +115,11 @@ namespace SourceGrid.Cells.Editors
 			else
 				return false;
 		}
-		/// <summary>
-		/// String used when error occurred
-		/// </summary>
-		public string ErrorString
+        /// <summary>
+        /// String used when error occurred
+        /// </summary>
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public string ErrorString
 		{
 			get{return m_ErrorString;}
 			set{m_ErrorString = value;}
@@ -126,39 +128,45 @@ namespace SourceGrid.Cells.Editors
 
 		#region Editable settings
 		private bool m_bEnableEdit = true;
-		/// <summary>
-		/// Enable or disable the cell editor (if disable no visual edit is allowed)
-		/// </summary>
-		public bool EnableEdit
+        /// <summary>
+        /// Enable or disable the cell editor (if disable no visual edit is allowed)
+        /// </summary>
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public bool EnableEdit
 		{
 			get{return m_bEnableEdit;}
 			set{m_bEnableEdit = value;}
 		}
 
 		private EditableMode m_EditableMode = EditableMode.Default;
-		/// <summary>
-		/// Mode to edit the cell.
-		/// </summary>
-		public EditableMode EditableMode
+        /// <summary>
+        /// Mode to edit the cell.
+        /// </summary>
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public EditableMode EditableMode
 		{
 			get{return m_EditableMode;}
 			set{m_EditableMode = value;}
 		}
 
 		private bool m_bEnableCellDrawOnEdit = true;
-		/// <summary>
-		/// Indicates if the draw of the cell when in editing mode is enabled.
-		/// </summary>
-		public virtual bool EnableCellDrawOnEdit
+
+        /// <summary>
+        /// Indicates if the draw of the cell when in editing mode is enabled.
+        /// </summary>
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public virtual bool EnableCellDrawOnEdit
 		{
 			get{return m_bEnableCellDrawOnEdit;}
 			set{m_bEnableCellDrawOnEdit = value;}
 		}
 
         private bool mUseCellViewProperties = true;
+
         /// <summary>
         /// Gets or sets if the editor must assign to the editor control the default view properties: ForeColor, BackColor, Font. This can be disabled if you want to manually assign these properties to the control.
         /// </summary>
+		[Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public virtual bool UseCellViewProperties
         {
             get { return mUseCellViewProperties; }
@@ -169,6 +177,7 @@ namespace SourceGrid.Cells.Editors
         /// Gets or sets whether the editor should open in readonly state or not.
         /// sandhra.prakash@siemens.com: enhancement : selectable readonly text
         /// </summary>
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool ReadOnly { get; set; }
 
 		#endregion
@@ -277,7 +286,7 @@ namespace SourceGrid.Cells.Editors
                     {
                         OnEditException(new ExceptionEventArgs(err));
                         cellContext.Cell.Model.ValueModel.SetValue(cellContext, l_PrevValue);
-                        l_cancelEvent.Cancel = true;//di fatto è fallita la validazione del dato
+                        l_cancelEvent.Cancel = true;//di fatto ?fallita la validazione del dato
                     }
                 }
 
