@@ -1,4 +1,4 @@
-[![Build and Release](https://github.com/huanlin/SourceGrid/actions/workflows/build-release.yml/badge.svg)](https://github.com/huanlin/SourceGrid/actions/workflows/build-and-release.yml)
+[![Build and Release](https://github.com/huanlin/SourceGrid/actions/workflows/build-release.yml/badge.svg)](https://github.com/huanlin/SourceGrid/actions/workflows/build-release.yml)
 [![NuGet](https://img.shields.io/nuget/v/SourceGrid-huanlin.svg)](https://www.nuget.org/packages/SourceGrid-huanlin/) 
 
 ## SourceGrid
@@ -26,7 +26,7 @@ This fork is created by Michael Tsai to support the recent .NET versions.
 ### Build and Release
 
 - Use [MinVer](https://github.com/adamralph/minver) for versioning with tag name. The tag name should be in the format `X.Y.Z` (e.g., `6.1.0`). Note: Do not use `v` prefix.
-- Automatically deploy the package to NuGet.org. See .github/workflows/build-and-deploy.yml for details.
+- Automatically deploy the package to NuGet.org. See .github/workflows/build-release.yml for details.
 
 ### Recent Changes
 
@@ -42,5 +42,4 @@ See https://github.com/siemens/sourcegrid for original README.
 
 # License
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/siemens/sourcegrid/blob/master/LICENSE) file for details 
-
 
