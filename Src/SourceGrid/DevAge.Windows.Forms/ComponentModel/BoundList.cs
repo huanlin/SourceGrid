@@ -65,7 +65,7 @@ namespace DevAge.ComponentModel
             List<T> sortableList = mList as List<T>;
 
             if (sortableList == null)
-                throw new DevAgeApplicationException("Sort not supported, the list must be an instance of List<T>.");
+                throw new DevAgeException("Sort not supported, the list must be an instance of List<T>.");
 
             sortableList.Sort(
                 delegate(T x, T y)

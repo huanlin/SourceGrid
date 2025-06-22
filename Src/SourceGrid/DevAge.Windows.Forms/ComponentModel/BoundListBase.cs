@@ -21,7 +21,7 @@ namespace DevAge.ComponentModel
         public int BeginAddNew()
         {
             if (mEditItem != null)
-                throw new DevAgeApplicationException("There is already a row in editing state, call EndEdit first");
+                throw new DevAgeException("There is already a row in editing state, call EndEdit first");
 
             mEditItem = OnAddNew();
 
@@ -37,7 +37,7 @@ namespace DevAge.ComponentModel
         public void BeginEdit(int index)
         {
             if (mEditItem != null)
-                throw new DevAgeApplicationException("There is already a row in editing state, call EndEdit first");
+                throw new DevAgeException("There is already a row in editing state, call EndEdit first");
 
             mEditItem = (T)this[index];
             mEditIndex = index;
@@ -142,7 +142,7 @@ namespace DevAge.ComponentModel
         public void SetEditValue(System.ComponentModel.PropertyDescriptor property, object value)
         {
             if (mEditItem == null)
-                throw new DevAgeApplicationException("There isn't a row in editing state, call BeginAddNew or BeginEdit first");
+                throw new DevAgeException("There isn't a row in editing state, call BeginAddNew or BeginEdit first");
 
             //Save the previous value to enable the restore if the user cancel the editing
             if (mPreviousValues.ContainsKey(property) == false)

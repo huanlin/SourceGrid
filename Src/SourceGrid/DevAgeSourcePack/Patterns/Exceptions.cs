@@ -6,7 +6,7 @@ namespace DevAge.Patterns
 	/// Exception fired when canceling an activity with the Cancel method.
 	/// </summary>
 	[Serializable]
-	public class ActivityCanceledException : DevAgeApplicationException
+	public class ActivityCanceledException : DevAgeException
 	{
         /// <summary>
         /// Constructor
@@ -22,7 +22,7 @@ namespace DevAge.Patterns
 	/// Exception fired when canceling an activity with the Cancel method.
 	/// </summary>
 	[Serializable]
-	public class ActivityStatusNotValidException : DevAgeApplicationException
+	public class ActivityStatusNotValidException : DevAgeException
 	{
         /// <summary>
         /// Constructor
@@ -37,7 +37,7 @@ namespace DevAge.Patterns
 	/// Exception fired when a time out is encountered.
 	/// </summary>
 	[Serializable]
-	public class TimeOutActivityException : DevAgeApplicationException
+	public class TimeOutActivityException : DevAgeException
 	{
         /// <summary>
         /// Constructor
@@ -53,7 +53,7 @@ namespace DevAge.Patterns
 	/// Exception fired when a time out is encountered.
 	/// </summary>
 	[Serializable]
-	public class SubActivityException : DevAgeApplicationException
+	public class SubActivityException : DevAgeException
 	{
         /// <summary>
         /// Constructor

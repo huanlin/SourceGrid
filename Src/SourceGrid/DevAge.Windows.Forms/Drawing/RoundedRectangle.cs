@@ -39,7 +39,7 @@ namespace DevAge.Drawing
 			set
 			{
 				if (mRoundValue < 0 || mRoundValue > 1)
-					throw new ApplicationException("Invalid value, must be a value from 0 to 1");
+					throw new Exception("Invalid value, must be a value from 0 to 1");
 				mRoundValue = value;
 			}
 		}

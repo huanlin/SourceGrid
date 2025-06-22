@@ -1,12 +1,14 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace SourceGrid
 {
 	public partial class Grid
 	{
-		public override bool EnableSort {get;set;}
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public override bool EnableSort {get;set;}
 		
 	}
 	

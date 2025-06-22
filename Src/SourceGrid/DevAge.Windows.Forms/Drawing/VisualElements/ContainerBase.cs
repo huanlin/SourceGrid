@@ -273,7 +273,7 @@ namespace DevAge.Drawing.VisualElements
                 }
             }
             else
-                throw new ApplicationException("DrawMode not supported");
+                throw new Exception("DrawMode not supported");
         }
 
         protected override SizeF OnMeasureContent(MeasureHelper measure, SizeF maxSize)
@@ -313,7 +313,7 @@ namespace DevAge.Drawing.VisualElements
                 }
             }
             else
-                throw new ApplicationException("DrawMode not supported");
+                throw new Exception("DrawMode not supported");
 
             return GetExtent(measure, clienSize);
         }
@@ -353,7 +353,7 @@ namespace DevAge.Drawing.VisualElements
                 }
             }
             else
-                throw new ApplicationException("DrawMode not supported");
+                throw new Exception("DrawMode not supported");
 
             return list;
         }

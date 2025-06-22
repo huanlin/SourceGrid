@@ -58,7 +58,7 @@ namespace SourceGrid.Cells.Models
 
 		public void SetValue(CellContext cellContext, object p_Value)
 		{
-			throw new ApplicationException("This model doesn't support editing");
+			throw new Exception("This model doesn't support editing");
 		}
 		public string GetDisplayText(CellContext cellContext)
 		{

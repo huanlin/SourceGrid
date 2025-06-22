@@ -110,7 +110,7 @@ namespace DevAge.ComponentModel.Validator
 			if (m_DisplayStringList != null)
 			{
 				if (m_ValueList == null)
-					throw new ApplicationException("ValueList cannot be null");
+					throw new Exception("ValueList cannot be null");
 				
 				int l_Index = m_ValueList.IndexOf(e.Value);
 				if (l_Index >= 0)
@@ -131,7 +131,7 @@ namespace DevAge.ComponentModel.Validator
 			if (mSpecialList != null && e.Value != null && e.Value.GetType() == SpecialType)
 			{
 				if (m_ValueList == null)
-					throw new ApplicationException("ValueList cannot be null");
+					throw new Exception("ValueList cannot be null");
 				
 				//Verifico se fa parte della lista di valori
 				int index = m_ValueList.IndexOf(e.Value);
@@ -160,9 +160,9 @@ namespace DevAge.ComponentModel.Validator
 			if (mSpecialList != null && e.DestinationType == SpecialType)
 			{
 				if (m_ValueList == null)
-					throw new ApplicationException("ValueList cannot be null");
+					throw new Exception("ValueList cannot be null");
 				
-				//Verifico se il valore è presente nella list, in questo caso restituisco l'oggetto associato
+				//Verifico se il valore ?presente nella list, in questo caso restituisco l'oggetto associato
 				int l_Index = m_ValueList.IndexOf(e.Value);
 				if (l_Index >= 0)
 				{

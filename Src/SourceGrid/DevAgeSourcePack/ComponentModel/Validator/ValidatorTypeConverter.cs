@@ -65,25 +65,25 @@ namespace DevAge.ComponentModel.Validator
 			base.OnConvertingObjectToValue(e);
 
 			if (e.ConvertingStatus == ConvertingStatus.Error)
-				throw new ApplicationException("Invalid conversion");
+				throw new Exception("Invalid conversion");
 			else if (e.ConvertingStatus == ConvertingStatus.Completed)
 				return;
 
 			if (e.Value == null)
 			{
 			}
-			else if (e.Value is string) //è importante fare prima il caso stringa per gestire correttamente il null
+			else if (e.Value is string) //?importante fare prima il caso stringa per gestire correttamente il null
 			{
 				string tmp = (string)e.Value;
 				if (IsNullString(tmp))
 					e.Value = null;
-				else if (e.DestinationType.IsAssignableFrom(e.Value.GetType())) //se la stringa non è nulla e il tipo di destinazione è sempre una string allora non faccio nessuna conversione
+				else if (e.DestinationType.IsAssignableFrom(e.Value.GetType())) //se la stringa non ?nulla e il tipo di destinazione ?sempre una string allora non faccio nessuna conversione
 				{
 				}
 				else if (IsStringConversionSupported())
 					e.Value = m_TypeConverter.ConvertFromString(EmptyTypeDescriptorContext.Empty, CultureInfo, tmp);
 				else
-					throw new ApplicationException("String conversion not supported for this type of Validator.");
+					throw new Exception("String conversion not supported for this type of Validator.");
 			}
 			else if (e.DestinationType.IsAssignableFrom(e.Value.GetType()))
 			{
@@ -108,7 +108,7 @@ namespace DevAge.ComponentModel.Validator
 			base.OnConvertingValueToObject(e);
 
 			if (e.ConvertingStatus == ConvertingStatus.Error)
-				throw new ApplicationException("Invalid conversion");
+				throw new Exception("Invalid conversion");
 			else if (e.ConvertingStatus == ConvertingStatus.Completed)
 				return;
 
@@ -120,7 +120,7 @@ namespace DevAge.ComponentModel.Validator
 			}
 			else if (e.DestinationType == typeof(string) && IsStringConversionSupported() == false)
 			{
-				throw new ApplicationException("String conversion not supported for this type of Validator.");
+				throw new Exception("String conversion not supported for this type of Validator.");
 			}
 			else if (m_TypeConverter != null)
 			{

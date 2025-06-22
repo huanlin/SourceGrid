@@ -296,7 +296,7 @@ namespace DevAge.IO
 
 
 	[Serializable]
-	public class InvalidDataException : DevAgeApplicationException  
+	public class InvalidDataException : DevAgeException  
 	{
 		public InvalidDataException():
 			base("Invalid data exception")
@@ -311,14 +311,10 @@ namespace DevAge.IO
 			base(p_strErrDescription, p_InnerException)
 		{
 		}
-		protected InvalidDataException(System.Runtime.Serialization.SerializationInfo p_Info, System.Runtime.Serialization.StreamingContext p_StreamingContext): 
-			base(p_Info, p_StreamingContext)
-		{
-		}
 	}
 
 	[Serializable]
-	public class TypeNotSupportedException : DevAgeApplicationException
+	public class TypeNotSupportedException : DevAgeException
 	{
 		public TypeNotSupportedException(Type pType):
 			base("Type not supported: " + pType.ToString())
@@ -331,10 +327,6 @@ namespace DevAge.IO
 		}
 		public TypeNotSupportedException(string p_strErrDescription, Exception p_InnerException):
 			base(p_strErrDescription, p_InnerException)
-		{
-		}
-		protected TypeNotSupportedException(System.Runtime.Serialization.SerializationInfo p_Info, System.Runtime.Serialization.StreamingContext p_StreamingContext): 
-			base(p_Info, p_StreamingContext)
 		{
 		}
 	}

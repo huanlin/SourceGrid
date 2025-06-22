@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 
 namespace DevAge.Patterns
 {
@@ -20,9 +20,9 @@ namespace DevAge.Patterns
 
 		private void CheckParent()
 		{
-			//Tolto perchè voglio permettere la modifica delle collection anche durante il calcolo
+			//Tolto perch?voglio permettere la modifica delle collection anche durante il calcolo
 //			if (mParentActivity.Status == ActivityStatus.Running)
-//				throw new DevAgeApplicationException("Cannot add or remove activities while in running status");
+//				throw new DevAgeException("Cannot add or remove activities while in running status");
 		}
 
 		public int Count

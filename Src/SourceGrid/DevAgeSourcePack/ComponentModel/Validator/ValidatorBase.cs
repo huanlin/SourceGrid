@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.ComponentModel;
 using System.ComponentModel.Design;
 using System.ComponentModel.Design.Serialization;
@@ -197,7 +197,7 @@ namespace DevAge.ComponentModel.Validator
 		public object ValueToObject(object p_Value, Type p_ReturnObjectType)
 		{
 			if (p_ReturnObjectType == null)
-				throw new DevAgeApplicationException("Invalid parameter returnObjectType cannot be null");
+				throw new DevAgeException("Invalid parameter returnObjectType cannot be null");
 
 			ConvertingObjectEventArgs l_Converting = new ConvertingObjectEventArgs(p_Value, p_ReturnObjectType);
 			OnConvertingValueToObject(l_Converting);
@@ -340,7 +340,7 @@ namespace DevAge.ComponentModel.Validator
 			else if (e.ConvertingStatus == ConvertingStatus.Completed)
 				return;
 
-			if (e.Value is string) //è importante fare prima il caso stringa per gestire correttamente il null
+			if (e.Value is string) //?importante fare prima il caso stringa per gestire correttamente il null
 			{
 				string tmp = (string)e.Value;
 				if (IsNullString(tmp))
@@ -649,7 +649,7 @@ namespace DevAge.ComponentModel.Validator
 		public virtual object StandardValueAtIndex(int p_Index)
 		{
 			if (m_StandardValues == null)
-				throw new DevAgeApplicationException("StandardValues is null");
+				throw new DevAgeException("StandardValues is null");
 
 			System.Collections.IList l_List = m_StandardValues as System.Collections.IList;
 			if (l_List != null)
@@ -665,7 +665,7 @@ namespace DevAge.ComponentModel.Validator
 					l_CurrentIndex++;
 				}
 
-				throw new DevAgeApplicationException("Invalid Index");
+				throw new DevAgeException("Invalid Index");
 			}
 		}
 
@@ -677,7 +677,7 @@ namespace DevAge.ComponentModel.Validator
 		public virtual int StandardValuesIndexOf(object p_StandardValue)
 		{
 			if (m_StandardValues == null)
-				throw new DevAgeApplicationException("StandardValues is null");
+				throw new DevAgeException("StandardValues is null");
 
 			System.Collections.IList l_List = m_StandardValues as System.Collections.IList;
 			if (l_List != null)

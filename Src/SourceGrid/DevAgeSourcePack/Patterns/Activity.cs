@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 
 namespace DevAge.Patterns
 {
@@ -252,7 +252,7 @@ namespace DevAge.Patterns
 		public static void WaitActivity(IActivity activity, int timeout)
 		{
 			if (activity.Status == ActivityStatus.Pending)
-				throw new DevAgeApplicationException("Activity not started");
+				throw new DevAgeException("Activity not started");
 			else if (activity.Status == ActivityStatus.Running)
 			{
 				bool terminated = activity.WaitHandle.WaitOne(timeout, false);
@@ -400,7 +400,7 @@ namespace DevAge.Patterns
 			set
 			{
 				if (mParent != null && value != null)
-					throw new DevAgeApplicationException("Activity already has a parent");
+					throw new DevAgeException("Activity already has a parent");
 
 				mParent = value;
 			}
@@ -449,8 +449,8 @@ namespace DevAge.Patterns
 		protected override void OnBeginWork(AsyncCallback callback)
 		{
 			//Chiamo in maniera asincrona proprio la funzione di callback,
-			// perchè logicamente questa funzione deve solo chiamare su un altro thread la funzione di callback che a sua volta chiama la complete e le chiamate correlate
-			// devo fare un giro su un altro delegate perchè altrimenti creo un deadlock, perchè aspetto sullo stesso thread che deve finire
+			// perch?logicamente questa funzione deve solo chiamare su un altro thread la funzione di callback che a sua volta chiama la complete e le chiamate correlate
+			// devo fare un giro su un altro delegate perch?altrimenti creo un deadlock, perch?aspetto sullo stesso thread che deve finire
 			asyncDelegate.BeginInvoke(callback, new Object());
 		}
 

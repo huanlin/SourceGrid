@@ -594,20 +594,6 @@ namespace SourceGrid
         #endregion
 
         #region Row/Col Span
-        [Obsolete]
-        private static int m_MaxSpan = 100;
-        /// <summary>
-        /// Gets the maximum rows or columns number to search when using Row/Col Span.
-        /// This is a static property.
-        /// This value is automatically calculated based on the current cells. Do not change this value manually.
-        /// Default is 100.
-        /// </summary>
-        [Obsolete("This property is not needed anymore. It has completely no effect")]
-        public static int MaxSpan
-        {
-            get { return m_MaxSpan; }
-            set { m_MaxSpan = value; }
-        }
 
         /// <summary>
         /// This method converts a Position to the real range of the cell. This is usefull when RowSpan or ColumnSpan is greater than 1.

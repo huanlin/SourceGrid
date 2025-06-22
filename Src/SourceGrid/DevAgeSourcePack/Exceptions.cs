@@ -7,13 +7,13 @@ namespace DevAge
     /// Generic DevAge Exception
     /// </summary>
     [Serializable]
-    public class DevAgeApplicationException : ApplicationException
+    public class DevAgeException : Exception
     {
         /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="p_strErrDescription"></param>
-        public DevAgeApplicationException(string p_strErrDescription) :
+        public DevAgeException(string p_strErrDescription) :
             base(p_strErrDescription)
         {
         }
@@ -23,21 +23,9 @@ namespace DevAge
         /// </summary>
         /// <param name="p_strErrDescription"></param>
         /// <param name="p_InnerException"></param>
-        public DevAgeApplicationException(string p_strErrDescription, Exception p_InnerException) :
+        public DevAgeException(string p_strErrDescription, Exception p_InnerException) :
             base(p_strErrDescription, p_InnerException)
         {
-        }
-
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="p_Info"></param>
-        /// <param name="p_StreamingContext"></param>
-        protected DevAgeApplicationException(SerializationInfo p_Info, StreamingContext p_StreamingContext) :
-            base(p_Info, p_StreamingContext) // Use the base constructor explicitly
-        {
-            if (p_Info == null)
-                throw new ArgumentNullException(nameof(p_Info));
         }
     }
 
@@ -45,7 +33,7 @@ namespace DevAge
     /// The type specified it is not supported in the current contest
     /// </summary>
     [Serializable]
-    public class TypeNotSupportedException : DevAgeApplicationException
+    public class TypeNotSupportedException : DevAgeException
     {
         /// <summary>
         /// Constructor
@@ -71,7 +59,7 @@ namespace DevAge
     /// Command line not valid exception
     /// </summary>
     [Serializable]
-    public class UnrecognizedCommandLineParametersException : DevAgeApplicationException
+    public class UnrecognizedCommandLineParametersException : DevAgeException
     {
         /// <summary>
         /// Constructor
@@ -97,7 +85,7 @@ namespace DevAge
     /// Conversion exception
     /// </summary>
     [Serializable]
-    public class ConversionErrorException : DevAgeApplicationException
+    public class ConversionErrorException : DevAgeException
     {
         /// <summary>
         /// Constructor

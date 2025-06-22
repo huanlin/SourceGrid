@@ -40,7 +40,7 @@ namespace DevAge.Patterns
 			//Note: I can't assign directly the return IAsyncResult to the member variable mAsyncResult in the StartActivity, because there can be situations when the CurrentAsyncCallback is called before the variable receive the value, for this reason I assign the member variable directly in the CurrentAsyncCallback callback
 			mAsyncResult = asyncResult;
 			if (mAsyncResult == null)
-				throw new DevAgeApplicationException("Invalid async activity, IAsyncResult is null");
+				throw new DevAgeException("Invalid async activity, IAsyncResult is null");
 
 			//Do the internal work
 			DoWork();

@@ -94,7 +94,7 @@ namespace DevAge.ComponentModel
 		public virtual int BeginAddNew()
 		{
 			if (mEditingRow != null)
-				throw new DevAgeApplicationException("There is already a row in editing state, call EndEdit first");
+				throw new DevAgeException("There is already a row in editing state, call EndEdit first");
 
 			mEditingRow = m_dataView.AddNew();
 
@@ -108,7 +108,7 @@ namespace DevAge.ComponentModel
 		public virtual void BeginEdit(int index)
 		{
 			if (mEditingRow != null)
-				throw new DevAgeApplicationException("There is already a row in editing state, call EndEdit first");
+				throw new DevAgeException("There is already a row in editing state, call EndEdit first");
 
 			mEditingRow = m_dataView[index];
 
@@ -221,7 +221,7 @@ namespace DevAge.ComponentModel
 				value = System.DBNull.Value;
 
 			if (mEditingRow == null)
-				throw new DevAgeApplicationException("There isn't a row in editing state, call BeginAddNew or BeginEdit first");
+				throw new DevAgeException("There isn't a row in editing state, call BeginAddNew or BeginEdit first");
 
 			property.SetValue(mEditingRow, value);
 		}

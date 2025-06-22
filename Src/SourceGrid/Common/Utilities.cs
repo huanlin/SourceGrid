@@ -83,7 +83,7 @@ namespace SourceGrid
 	}
 
 	[Serializable]
-	public class SourceGridException : ApplicationException
+	public class SourceGridException : Exception
 	{
 		public SourceGridException(string message): base(message)
 		{

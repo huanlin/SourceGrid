@@ -268,11 +268,11 @@ namespace DevAge.Windows.Forms
 			m_bShowed = true;
 
 			if (InnerControl == null)
-				throw new ApplicationException("InnerControl is null");
+				throw new Exception("InnerControl is null");
 			if (ParentControl == null)
-				throw new ApplicationException("ParentControl is null");
+				throw new Exception("ParentControl is null");
 			if (Owner == null)
-				throw new ApplicationException("Owner is null");
+				throw new Exception("Owner is null");
 
 			OnDropDownOpen(EventArgs.Empty);
 		}

@@ -99,7 +99,7 @@ namespace SourceGrid.Exporter
 		/// <returns></returns>
 		public static string ColorToHTML(System.Drawing.Color p_Color)
 		{
-			//non uso direttamente ToHtml su p_Color petchè se questo contiene dei valori tipo (Window, Control, cioè valori definiti in base al sistema) su Mozilla non funzionano
+			//non uso direttamente ToHtml su p_Color petch?se questo contiene dei valori tipo (Window, Control, cio?valori definiti in base al sistema) su Mozilla non funzionano
 			return System.Drawing.ColorTranslator.ToHtml(System.Drawing.Color.FromArgb(p_Color.A,p_Color.R, p_Color.G, p_Color.B));
 		}
 

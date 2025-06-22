@@ -30,7 +30,7 @@ namespace DevAge.IO.IsolatedStorage
 		public virtual void Load()
 		{
 			if (m_FileName==null)
-				throw new ApplicationException("Invalid filename");
+				throw new Exception("Invalid filename");
 
 			//carico le impostazioni
 			using (IsolatedStorageFile l_Storage = GetStorage())
@@ -68,7 +68,7 @@ namespace DevAge.IO.IsolatedStorage
 		public virtual void Reset()
 		{
 			if (m_FileName==null)
-				throw new ApplicationException("Invalid filename");
+				throw new Exception("Invalid filename");
 
 			using (IsolatedStorageFile l_Storage = GetStorage())
 			{
@@ -91,7 +91,7 @@ namespace DevAge.IO.IsolatedStorage
 		public virtual void Save()
 		{
 			if (m_FileName==null)
-				throw new ApplicationException("Invalid filename");
+				throw new Exception("Invalid filename");
 
 			using (IsolatedStorageFile l_Storage = GetStorage())
 			{
