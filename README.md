@@ -1,4 +1,4 @@
-﻿[![Build and Release](https://github.com/huanlin/SourceGrid/actions/workflows/build-release.yml/badge.svg)](https://github.com/huanlin/SourceGrid/actions/workflows/build-release.yml)
+﻿[![Build status](https://github.com/huanlin/SourceGrid/actions/workflows/build-release.yml/badge.svg)](https://github.com/huanlin/SourceGrid/actions/workflows/build-release.yml)
 [![NuGet](https://img.shields.io/nuget/v/SourceGrid-huanlin.svg)](https://www.nuget.org/packages/SourceGrid-huanlin/) 
 
 ## SourceGrid
@@ -14,9 +14,7 @@ For more detailed information, Refer article at [CodeProject](https://www.codepr
 
 ## Note of this Fork
 
-This fork is created by Michael Tsai to support the recent .NET versions.
-
-> 此 fork 是由 Michael Tsai 創建，目的是持續跟進支援當前主流版本的 .NET。
+This repository was a fork based on [siemens/sourcegrid](https://github.com/siemens/sourcegrid). Then, it is detached from the original repository on June 2025.
 
 ### Preconditions
 
